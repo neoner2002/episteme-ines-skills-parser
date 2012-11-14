@@ -4,6 +4,8 @@
  */
 package inesskillsparser;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author fet
@@ -13,19 +15,26 @@ public class Company {
     boolean isLow = true;
     boolean isMed = false;
     boolean isHigh = false;
+    ArrayList<Skill> skills = new ArrayList<>();
     
     Company(String name){
         this.name = name;
     }
     
     public String getSkillLevel(){
-        String response = "LOW";
+        String response = "Intermediate";
         if(isMed){
-            response = "MED";
+            response = "Expert";
         }
         if(isHigh){
-            response = "HIGH";
+            response = "Advanced";
         }
         return response;
+    }
+
+    public void addSkill(String name, String level){
+        Skill skill = new Skill(name);
+        skill.level = level;
+        skills.add(skill);
     }
 }

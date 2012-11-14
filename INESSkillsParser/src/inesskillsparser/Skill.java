@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class Skill {
     String name;
+    String level;
     ArrayList<Company> companies = new ArrayList<>();
     
     Skill(String name){
@@ -16,4 +17,5 @@ public class Skill {
     public void addCompany(Company company){
         companies.add(company);
     }
+    
 }

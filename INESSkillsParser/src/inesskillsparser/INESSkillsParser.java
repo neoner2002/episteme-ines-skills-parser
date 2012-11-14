@@ -55,21 +55,69 @@ public class INESSkillsParser
     return skills;
     }
 
+    public ArrayList getCompanies(ArrayList<Skill> skills)
+    {
+        ArrayList<Company> companies = new ArrayList<>();
+
+        Iterator<Skill> itr = skills.iterator();
+            while (itr.hasNext()) {
+              Skill s = itr.next();
+              System.out.println(s.name);
+              ArrayList<Company> skillCompanies = s.companies;
+              Iterator<Company> itr2 = skillCompanies.iterator();
+              while (itr2.hasNext()) {
+                  Company c = itr2.next();
+                  System.out.println("\t" + c.name + " lvl:" + c.getSkillLevel());
+                  String name = c.name;
+                  String skill = s.name;
+                  String level = c.getSkillLevel();
+                  Iterator<Company> comp = companies.iterator();
+                  boolean found = false;
+                  while (comp.hasNext()) {
+                      Company c2 = comp.next();
+                      if(name.equals(c2.name)){
+                          c2.addSkill(skill, level);
+                          found = true;
+                      }
+                  }
+                  if (!found){
+                      Company c3 = new Company(name);
+                      c3.addSkill(skill, level);
+                      companies.add(c3);
+                  }
+              }
+            }
+    return companies;
+    }
+
     public static void main(String[] args)
     {
         try
         {
-            INESSkillsParser thp = new INESSkillsParser(new URL(url));
-            ArrayList<Skill> skills = thp.parse();
+            INESSkillsParser parser = new INESSkillsParser(new URL(url));
+            ArrayList<Skill> skills = parser.parse();
             Iterator<Skill> itr = skills.iterator();
             while (itr.hasNext()) {
               Skill s = itr.next();
               System.out.println(s.name);
-              ArrayList<Company> companies = s.companies;
-              Iterator<Company> itr2 = companies.iterator();
+              ArrayList<Company> skillCompanies = s.companies;
+              Iterator<Company> itr2 = skillCompanies.iterator();
               while (itr2.hasNext()) {
                 Company c = itr2.next();
                   System.out.println("\t" + c.name + " lvl:" + c.getSkillLevel());
+              }
+            }
+
+            ArrayList<Company> companies = parser.getCompanies(skills);
+            Iterator<Company> comp = companies.iterator();
+            while (comp.hasNext()) {
+              Company c = comp.next();
+              System.out.println(c.name);
+              ArrayList<Skill> compSkills = c.skills;
+              Iterator<Skill> itr3 = compSkills.iterator();
+              while (itr3.hasNext()) {
+                Skill s2 = itr3.next();
+                  System.out.println("\t" + s2.name + " lvl:" + s2.level);
               }
             }
         }
