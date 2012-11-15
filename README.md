@@ -1,6 +1,6 @@
 Introduction
 ---------------------
-Java HTML parser for INES web to add skills information to episteme INES companies
+Java HTML parser for INES web and RDF processor to add skills information to episteme INES companies
 
 * Put the rdf files in the input folder, make sure that all rdf files are companies
 * Execute InesXMLProcessor
