@@ -52,12 +52,25 @@
               <rdf:Description>
                 <rdf:li>
                   <rdf:Description>
-                    <ecos:name>Artículos de telefonía</ecos:name>
-                  </rdf:Description>
-                </rdf:li>
-                <rdf:li>
-                  <rdf:Description>
-                    <ecos:name>Asesoría en telecomunicación</ecos:name>
+                    <ecos:name>Atos Research &amp; Innovation tiene por misión estudiar y promover tecnologías innovadoras y emergentes en la empresa. 
+Por la actividad y dimensión de la compañía, ARI tiene competencias en todos los retos de la AEI, tanto en el Pilar Software como en el Pilar Servicios como en los Fundamentos clave. 
+A continuación se listan las competencias tecnológicas ordenadas por su proximidad y relevancia a la AEI de INES (todas ellas soportadas por un equipo transversal de Desarrollo de Negocio):
+- Open Source &amp; Software Engineering
+- Service-Oriented Middleware Infrastructure (servicios Grid)
+- Semantics and Service Engineering
+- eLearning
+- eInclusion
+- Biotechnologies &amp; Healthcare
+- Innovative Government
+- Trust, Security &amp; Dependability
+- Innovación
+- Desarrollo de políticas (desarrollo rural, living labs, cooperación Internacional)
+- Geospatial &amp; Environment Applications
+- Space &amp; Satellite Communications
+- Aplicaciones de movilidad
+- Software embarcado
+- TTII para el transporte
+- Navegación</ecos:name>
                   </rdf:Description>
                 </rdf:li>
               </rdf:Description>

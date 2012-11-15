@@ -6,9 +6,9 @@ import java.util.ArrayList;
  * @author fet
  */
 public class Skill {
-    String name;
-    String level;
-    ArrayList<Company> companies = new ArrayList<>();
+    public String name;
+    public String level;
+    public ArrayList<Company> companies = new ArrayList<>();
     
     Skill(String name){
         this.name = name;

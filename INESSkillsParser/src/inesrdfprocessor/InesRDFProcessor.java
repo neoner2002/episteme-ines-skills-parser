@@ -30,7 +30,7 @@ public class InesRDFProcessor {
         Model model = ModelFactory.createDefaultModel();
 
         // use the FileManager to find the input file
-        InputStream in = FileManager.get().open("data/input/" + inputFileName);
+        InputStream in = FileManager.get().open("data/output/" + inputFileName);
         if (in == null) {
             throw new IllegalArgumentException(
                     "File: " + inputFileName + " not found");
@@ -55,7 +55,7 @@ public class InesRDFProcessor {
                         model.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag")).getBag().iterator();
                 while (iterator.hasNext()) {
                     Resource li = (Resource) iterator.next();
-                    System.out.println( li.getProperty(model.getProperty("http://kmm.lboro.ac.uk/ecos/1.0#" + "name")).getString());
+                    //System.out.println( li.getProperty(model.getProperty("http://kmm.lboro.ac.uk/ecos/1.0#" + "name")).getString());
                 }
 
             }
@@ -65,8 +65,8 @@ public class InesRDFProcessor {
     public void saveRDF(Model model, String file) {
         String outputFileName = file;
         try {
-            FileWriter writer = new FileWriter("data/output/" + outputFileName);
-            //model.write(System.out);
+            FileWriter writer = new FileWriter("data/output2/" + outputFileName);
+            model.write(writer);
         } catch (Exception e) {
             System.out.println("Error writing " + outputFileName);
         }
@@ -74,7 +74,7 @@ public class InesRDFProcessor {
 
     public static void main(String[] args) {
         InesRDFProcessor p = new InesRDFProcessor();
-        File folder = new File("data/input");
+        File folder = new File("data/output");
         File[] listOfFiles = folder.listFiles();
         String filename;
         for (int i = 0; i < listOfFiles.length; i++) {

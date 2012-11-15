@@ -11,11 +11,11 @@ import java.util.ArrayList;
  * @author fet
  */
 public class Company {
-    String name;
-    boolean isLow = true;
-    boolean isMed = false;
-    boolean isHigh = false;
-    ArrayList<Skill> skills = new ArrayList<>();
+    public String name;
+    public boolean isLow = true;
+    public boolean isMed = false;
+    public boolean isHigh = false;
+    public ArrayList<Skill> skills = new ArrayList<>();
     
     Company(String name){
         this.name = name;

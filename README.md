@@ -5,6 +5,11 @@ Java HTML parser for INES web and RDF processor to add skills information to epi
 * Put the rdf files in the input folder, make sure that all rdf files are companies
 * Execute InesXMLProcessor
 * Go to the output folder and you'll have processed rdf with skills and levels
+<<<<<<< HEAD
+=======
+
+* You can also find an uploader for RDF files to LMF and a delete HTML form for LMF in output folder.
+>>>>>>> Last version
 
 ## Contributors
 

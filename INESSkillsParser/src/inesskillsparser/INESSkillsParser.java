@@ -18,8 +18,9 @@ public class INESSkillsParser
 
     TagNode rootNode;
 
-    public INESSkillsParser(URL htmlPage) throws IOException
+    public INESSkillsParser() throws IOException
     {
+        URL htmlPage = new URL(url);
         HtmlCleaner cleaner = new HtmlCleaner();
         rootNode = cleaner.clean(htmlPage);
     }
@@ -94,7 +95,7 @@ public class INESSkillsParser
     {
         try
         {
-            INESSkillsParser parser = new INESSkillsParser(new URL(url));
+            INESSkillsParser parser = new INESSkillsParser();
             ArrayList<Skill> skills = parser.parse();
             Iterator<Skill> itr = skills.iterator();
             while (itr.hasNext()) {
