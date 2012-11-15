@@ -2,10 +2,13 @@ Introduction
 ---------------------
 Java HTML parser for INES web to add skills information to episteme INES companies
 
+* Put the rdf files in the input folder, make sure that all rdf files are companies
+* Execute InesXMLProcessor
+* Go to the output folder and you'll have processed rdf with skills and levels
+
 ## Contributors
 
 * Felipe Echanique (<neoner2002@gmail.com>) at [Grupo de Sistemas Inteligentes](http://www.gsi.dit.upm.es/), ETSIT-UPM.
-
 
 ## License
 
